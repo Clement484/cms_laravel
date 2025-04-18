@@ -1,0 +1,20 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import '../admin/css/sb-admin-2.min.css';
+@import '../admin/vendor/fontawesome-free/css/all.min.css';
+@import "node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css";
+
+@import '../homepage/assets/css/main.css';
+@import '../homepage/assets/vendor/bootstrap/css/bootstrap.min.css';
+@import '../homepage/assets/vendor/bootstrap-icons/bootstrap-icons.css';
+@import '../homepage/assets/vendor/aos/aos.css';
+@import '../homepage/assets/vendor/fontawesome-free/css/all.min.css';
+@import '../homepage/assets/vendor/glightbox/css/glightbox.min.css';
+@import '../homepage/assets/vendor/swiper/swiper-bundle.min.css';
