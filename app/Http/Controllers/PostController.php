@@ -15,10 +15,19 @@ class PostController extends Controller
      */
     public function index()
     {
-        // I addded the with method to eager load the category and user relationships
-        $posts = Post::with('category', 'user')
-            ->latest()
-            ->paginate(10);
+        $user = auth()->user();
+
+        if ($user->role === 'admin') {
+            // Admin sees all posts
+            $posts = Post::with('category', 'user')->latest()->paginate(10);
+        } else {
+            // Regular users see only their posts
+            $posts = Post::with('category', 'user')
+                ->where('user_id', $user->id)
+                ->latest()
+                ->paginate(10);
+        }
+        
         return view('admin.posts.index', compact('posts'));
     }
 

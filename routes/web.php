@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\RoleMiddleware;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
@@ -19,6 +20,8 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
+    
+    // Dashboard - any authenticated user can see this
     Route::get('/', function(){
         return view('admin.index', [
             'usersCount' => \App\Models\User::count(),
@@ -29,25 +32,29 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         ]);
     })->name('admin.index');
 
-    Route::resource('/categories', CategoryController::class);
+    // Admin-only routes
+    Route::middleware([RoleMiddleware::class . ':admin'])->group(function () {
+        Route::resource('/categories', CategoryController::class);
+        Route::resource('/users', UserController::class);
+        Route::resource('/messages', MessageController::class);
+
+        Route::patch('/comments/{id}/approve', [CommentController::class, 'approve'])->name('comments.approve');
+        Route::patch('/comments/{id}/spam', [CommentController::class, 'spam'])->name('comments.spam');
+
+        Route::patch('/messages/{id}/read', [MessageController::class, 'read'])->name('messages.read');
+        Route::patch('/messages/{id}/unread', [MessageController::class, 'unread'])->name('messages.unread');
+
+        Route::patch('/users/{id}/lock', [UserController::class, 'lock'])->name('users.lock');
+        Route::patch('/users/{id}/change_password', [UserController::class, 'change_password'])->name('users.change_password');
+    });
+
+    // Routes for all authenticated users (ie, posts, profile, comments)
     Route::resource('/posts', PostController::class);
     Route::resource('/comments', CommentController::class);
-    Route::resource('/messages', MessageController::class);
-    Route::resource('/users', UserController::class);
     Route::resource('/profile', ProfileController::class);
-
-    Route::patch('/comments/{id}/approve', [CommentController::class, 'approve'])->name('comments.approve');
-    Route::patch('/comments/{id}/spam', [CommentController::class, 'spam'])->name('comments.spam');
-
-    Route::patch('/messages/{id}/read', [MessageController::class, 'read'])->name('messages.read');
-    Route::patch('/messages/{id}/unread', [MessageController::class, 'unread'])->name('messages.unread');
-    
-    Route::patch('/users/{id}/lock', [UserController::class, 'lock'])->name('users.lock');
-    Route::patch('/users/{id}/change_password', [UserController::class, 'change_password'])->name('users.change_password');
-
     Route::post('/profile/change_password', [ProfileController::class, 'change_password'])->name('profile.change_password');
-
 });
+
 
 
 Route::post('/contact', function(StoreMessageRequest $request){

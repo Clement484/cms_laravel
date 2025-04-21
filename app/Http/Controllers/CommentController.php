@@ -13,7 +13,18 @@ class CommentController extends Controller
      */
     public function index()
     {
-        $comments = Comment::latest()->paginate(10);
+        $user = auth()->user();
+        if ($user->role === 'admin') {
+            // Admin sees all comments
+            $comments = Comment::with('post', 'user')->latest()->paginate(10);
+        } else {
+            // Regular users see only their comments
+            $comments = Comment::with('post', 'user')
+                ->where('user_id', $user->id)
+                ->latest()
+                ->paginate(10);
+        }
+
         return view('admin.comments.index', compact('comments'));
     }
 

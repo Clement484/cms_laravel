@@ -98,48 +98,52 @@
         </li>
 
         <!-- Nav Item - Messages -->
-        @php
-            $unread_messages = DB::table('messages')->where('status', 'unread')->latest()->take(4)->get();
-            $unread_messages_count = DB::table('messages')->where('status', 'unread')->count();
-        @endphp
-        <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw fs-5"></i>
-                <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">{{$unread_messages_count < 9 ? $unread_messages_count: '9+'}}</span>
-            </a>
-            <!-- Dropdown - Messages -->
-            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                    Message Center
-                </h6>
-                @foreach($unread_messages as $unread_message)
-                <a class="dropdown-item d-flex align-items-center" href="{{route('messages.index')}}">
-                    <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src=" {{ asset('storage/users/default.png') }}"
-                            alt="...">
-                        <div class="status-indicator bg-success"></div>
+        @auth
+            @if(Auth::user()->role == 'admin')
+                @php
+                    $unread_messages = DB::table('messages')->where('status', 'unread')->latest()->take(4)->get();
+                    $unread_messages_count = DB::table('messages')->where('status', 'unread')->count();
+                @endphp
+                <li class="nav-item dropdown no-arrow mx-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-envelope fa-fw fs-5"></i>
+                        <!-- Counter - Messages -->
+                        <span class="badge badge-danger badge-counter">{{$unread_messages_count < 9 ? $unread_messages_count: '9+'}}</span>
+                    </a>
+                    <!-- Dropdown - Messages -->
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">
+                            Message Center
+                        </h6>
+                        @foreach($unread_messages as $unread_message)
+                        <a class="dropdown-item d-flex align-items-center" href="{{route('messages.index')}}">
+                            <div class="dropdown-list-image mr-3">
+                                <img class="rounded-circle" src=" {{ asset('storage/users/default.png') }}"
+                                    alt="...">
+                                <div class="status-indicator bg-success"></div>
+                            </div>
+                            <div class="font-weight-bold">
+                                <div class="text-truncate">{{$unread_message->content}}</div>
+                                <div class="small text-gray-500">{{$unread_message->name}} · {{\Carbon\Carbon::parse($unread_message->created_at)->diffForHumans()}}</div>
+                            </div>
+                        </a>
+                        @endforeach
+                    
+                        @if($unread_messages_count > 0)
+                        <a class="dropdown-item text-center small text-gray-500" href="{{ route('messages.index') }}">
+                            Read More Messages
+                        </a>
+                        @else
+                            <span class="dropdown-item text-center small text-muted">
+                                No Messages
+                            </span>
+                        @endif
                     </div>
-                    <div class="font-weight-bold">
-                        <div class="text-truncate">{{$unread_message->content}}</div>
-                        <div class="small text-gray-500">{{$unread_message->name}} · {{\Carbon\Carbon::parse($unread_message->created_at)->diffForHumans()}}</div>
-                    </div>
-                </a>
-                @endforeach
-               
-                @if($unread_messages_count > 0)
-                <a class="dropdown-item text-center small text-gray-500" href="{{ route('messages.index') }}">
-                    Read More Messages
-                </a>
-                @else
-                    <span class="dropdown-item text-center small text-muted">
-                        No Messages
-                    </span>
-                @endif
-            </div>
-        </li>
+                </li>
+            @endif
+        @endauth
 
         <div class="topbar-divider d-none d-sm-block"></div>
 

@@ -51,44 +51,57 @@
     </li>
 
     <!-- Messages -->
-    <li class="nav-item {{ request()->routeIs('messages.index') ? 'active' : '' }}">
-        <a class="nav-link" href="{{route('messages.index')}}">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Messages</span>
-        </a>
-    </li>
+    @auth
+        @if(Auth::user()->role == 'admin')
+            <li class="nav-item {{ request()->routeIs('messages.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{route('messages.index')}}">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+        @endif
+    @endauth
 
     <!-- Categories -->
-    <li class="nav-item {{ request()->routeIs('categories.index') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('categories.index') }}">
-            <i class="fa-solid fa-tags"></i>
-            <span>Categories</span>
-        </a>
-    </li>
+    @auth
+        @if(Auth::user()->role == 'admin')
+            <li class="nav-item {{ request()->routeIs('categories.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('categories.index') }}">
+                    <i class="fa-solid fa-tags"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+        @endif
+    @endauth
+
 
     <hr class="sidebar-divider">
 
     <div class="sidebar-heading">USER MANAGEMENT</div>
 
     <!-- Users -->
-    <li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
-        <a class="nav-link {{ request()->routeIs('users.*') ? '' : 'collapsed' }}" href="#" data-toggle="collapse"
-            data-target="#collapseUsers" aria-expanded="{{ request()->routeIs('users.*') ? 'true' : 'false' }}"
-            aria-controls="collapseUsers">
-            <i class="fa-solid fa-users-gear"></i>
-            <span>Users</span>
-        </a>
-        <div id="collapseUsers" class="collapse {{ request()->routeIs('users.*') ? 'show' : '' }}"
-            aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">MANAGE USERS:</h6>
-                <a class="collapse-item {{ request()->routeIs('users.index') ? 'active' : '' }}"
-                   href="{{ route('users.index') }}">View All Users</a>
-                <a class="collapse-item {{ request()->routeIs('users.create') ? 'active' : '' }}"
-                   href="{{ route('users.create') }}">Create New User</a>
-            </div>
-        </div>
-    </li>
+    @auth
+        @if (Auth::user()->role == 'admin')
+            <li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
+                <a class="nav-link {{ request()->routeIs('users.*') ? '' : 'collapsed' }}" href="#" data-toggle="collapse"
+                    data-target="#collapseUsers" aria-expanded="{{ request()->routeIs('users.*') ? 'true' : 'false' }}"
+                    aria-controls="collapseUsers">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <span>Users</span>
+                </a>
+                <div id="collapseUsers" class="collapse {{ request()->routeIs('users.*') ? 'show' : '' }}"
+                    aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">MANAGE USERS:</h6>
+                        <a class="collapse-item {{ request()->routeIs('users.index') ? 'active' : '' }}"
+                        href="{{ route('users.index') }}">View All Users</a>
+                        <a class="collapse-item {{ request()->routeIs('users.create') ? 'active' : '' }}"
+                        href="{{ route('users.create') }}">Create New User</a>
+                    </div>
+                </div>
+            </li>
+        @endif
+    @endauth
 
     <!-- Profile -->
     <li class="nav-item {{ request()->routeIs('profile.*') ? 'active' : '' }}">
