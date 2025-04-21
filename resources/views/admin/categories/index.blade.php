@@ -120,7 +120,7 @@
                                 <td>
                                     <a 
                                         href="#" 
-                                        class="text-success me-3 edit-btn" 
+                                        class="text-success me-3 edit-btn text-decoration-none" 
                                         data-id="{{ $category->id }}" 
                                         data-name="{{ $category->name }}" 
                                         data-description="{{ $category->description ?? '' }}" 

@@ -82,7 +82,7 @@ class MessageController extends Controller
         $message->status = 'read';
         $message->save();
 
-        return back()->with('success', 'Message read.');
+        return back()->with('success', 'Message marked as read.');
     }
 
     public function unread($id)

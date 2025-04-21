@@ -77,7 +77,7 @@
                                 <td>
                                     <a 
                                         href="{{ route('posts.edit', $post->id) }}" 
-                                        class="text-success me-3 edit-btn" 
+                                        class="text-success me-3 edit-btn text-decoration-none" 
                                         data-id="{{ $post->id }}" 
                                         data-title="{{ $post->title }}" 
                                         data-content="{{ $post->content ?? '' }}" 

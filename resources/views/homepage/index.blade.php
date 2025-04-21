@@ -788,7 +788,7 @@
 
               <div class="post-img position-relative overflow-hidden">
                 <img src="{{ asset('storage/'. $post->image) }}" class="img-fluid" alt="">
-                <span class="post-date">{{$post->created_at->diffForHumans()}}</span> 
+                <span class="post-date">{{$post->created_at->format('F j')}}</span> 
                 {{-- December 12 --}}
               </div>
 

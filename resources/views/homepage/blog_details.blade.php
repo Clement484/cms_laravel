@@ -34,9 +34,9 @@
 
                 <div class="meta-top">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html" class="text-decoration-none">{{$post->user->name}}</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html" class="text-decoration-none"><time datetime="2020-01-01">{{$post->created_at->diffForHumans()}}</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html" class="text-decoration-none">{{$comments->count()}} Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="" class="text-decoration-none">{{$post->user->name}}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="" class="text-decoration-none"><time datetime="2020-01-01">{{$post->created_at->diffForHumans()}}</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="" class="text-decoration-none">{{$comments->count()}} Comments</a></li>
                   </ul>
                 </div><!-- End meta top -->
 
@@ -58,7 +58,7 @@
                 <div class="meta-bottom">
                   <i class="bi bi-folder"></i>
                   <ul class="cats">
-                    <li><a href="#" class="text-decoration-none">{{$post->category->name}}</a></li>
+                    <li><a href="{{route('homepage.category_blogs', $post->category->name)}}" class="text-decoration-none">{{$post->category->name}}</a></li>
                   </ul>
 
                   {{-- <i class="bi bi-tags"></i>

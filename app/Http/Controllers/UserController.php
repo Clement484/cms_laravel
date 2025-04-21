@@ -122,7 +122,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
 
-        return redirect('admin/users')->with('success', 'User deleted successfully.');
+        return back()->with('success', 'User deleted successfully.');
     }
 
     public function lock(string $id)
@@ -150,7 +150,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect()->route('users.index')->with('success', $user->name. "'s". ' Password changed successfully.');
+        return back()->with('success', $user->name. "'s". ' Password changed successfully.');
     }
 
 }
