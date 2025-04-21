@@ -8,7 +8,7 @@ Clone the repository
 - git clone https://github.com/Clement484/cms_laravel.git
 
 Navigate into the project directory
-- cd your-repo
+- cd cms_laravel
 
 Copy the example environment file
 - cp .env.example .env
