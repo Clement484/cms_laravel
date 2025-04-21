@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url({{ asset('storage/img/page-title-bg.jpg')}});">
+    <div class="page-title dark-background" style="background-image: url({{ Vite::asset('resources/homepage/assets/img/page-title-bg.jpg')}});">
       <div class="container position-relative">
         <h1>Contact</h1>
         <nav class="breadcrumbs">

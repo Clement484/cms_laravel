@@ -120,7 +120,7 @@
                         @foreach($unread_messages as $unread_message)
                         <a class="dropdown-item d-flex align-items-center" href="{{route('messages.index')}}">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src=" {{ asset('storage/users/default.png') }}"
+                                <img class="rounded-circle" src=" {{ Vite::asset('resources/homepage/assets/default.png') }}"
                                     alt="...">
                                 <div class="status-indicator bg-success"></div>
                             </div>

@@ -21,24 +21,24 @@
       <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
         <div class="carousel-item">
-          <img src="{{ asset('storage/img/hero-carousel/hero-carousel-1.jpg') }}" alt="">
+          <img src="{{ Vite::asset('resources/homepage/assets/img/hero-carousel/hero-carousel-1.jpg') }}" alt="">
           
         </div>
         
         <div class="carousel-item active">
-          <img src="{{ asset('storage/img/hero-carousel/hero-carousel-2.jpg') }}" alt="">
+          <img src="{{ Vite::asset('resources/homepage/assets/img/hero-carousel/hero-carousel-2.jpg') }}" alt="">
         </div>
 
         <div class="carousel-item">
-            <img src="{{ asset('storage/img/hero-carousel/hero-carousel-3.jpg') }}" alt="">
+            <img src="{{ Vite::asset('resources/homepage/assets/img/hero-carousel/hero-carousel-3.jpg') }}" alt="">
           </div>
 
         <div class="carousel-item">
-            <img src="{{ asset('storage/img/hero-carousel/hero-carousel-4.jpg') }}" alt="">
+            <img src="{{ Vite::asset('resources/homepage/assets/img/hero-carousel/hero-carousel-4.jpg') }}" alt="">
         </div>
 
         <div class="carousel-item">
-            <img src="{{ asset('storage/img/hero-carousel/hero-carousel-5.jpg') }}" alt="">
+            <img src="{{ Vite::asset('resources/homepage/assets/img/hero-carousel/hero-carousel-5.jpg') }}" alt="">
         </div>
 
         <a class="carousel-control-prev text-decoration-none" href="#hero-carousel" role="button" data-bs-slide="prev">
@@ -127,7 +127,7 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{{ asset('storage/img/constructions-1.jpg') }}" alt=""></div>
+                  <div class="card-bg"><img src="{{ Vite::asset('resources/homepage/assets/img/constructions-1.jpg') }}" alt=""></div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
@@ -143,7 +143,7 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{{ asset('storage/img/constructions-2.jpg') }}" alt=""></div>
+                  <div class="card-bg"><img src="{{ Vite::asset('resources/homepage/assets/img/constructions-2.jpg') }}" alt=""></div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
@@ -159,7 +159,7 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{{ asset('storage/img/constructions-3.jpg') }}" alt=""></div>
+                  <div class="card-bg"><img src="{{ Vite::asset('resources/homepage/assets/img/constructions-3.jpg') }}" alt=""></div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
@@ -175,7 +175,7 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{{ asset('storage/img/constructions-4.jpg') }}" alt=""></div>
+                  <div class="card-bg"><img src="{{ Vite::asset('resources/homepage/assets/img/constructions-4.jpg') }}" alt=""></div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
@@ -284,7 +284,7 @@
       <div class="container">
 
         <div class="row justify-content-around gy-4">
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{{ asset('storage/img/alt-services.jpg') }}" alt=""></div>
+          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{{ Vite::asset('resources/homepage/assets/img/alt-services.jpg') }}" alt=""></div>
 
           <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
@@ -379,7 +379,7 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{ asset('storage/img/features-1.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/features-1.jpg') }}" class="img-fluid" alt="">
               </div>
             </div>
           </div><!-- End tab content item -->
@@ -400,7 +400,7 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{ asset('storage/img/features-2.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/features-2.jpg') }}" class="img-fluid" alt="">
               </div>
             </div>
           </div><!-- End tab content item -->
@@ -420,7 +420,7 @@
                 </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{ asset('storage/img/features-3.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/features-3.jpg') }}" class="img-fluid" alt="">
               </div>
             </div>
           </div><!-- End tab content item -->
@@ -440,7 +440,7 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{ asset('storage/img/features-4.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/features-4.jpg') }}" class="img-fluid" alt="">
               </div>
             </div>
           </div><!-- End tab content item -->
@@ -476,11 +476,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
               <div class="portfolio-content h-100">
-               <img src="{{ asset('storage/img/projects/remodeling-1.jpg') }}" class="img-fluid" alt="">
+               <img src="{{ Vite::asset('resources/homepage/assets/img/projects/remodeling-1.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>App 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/features-1.jpg') }}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link text-decoration-none"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/features-1.jpg') }}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link text-decoration-none"><i class="bi bi-zoom-in"></i></a>
                   <a href="project-details.html" title="More Details" class="details-lin text-decoration-nonek"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -488,11 +488,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/construction-1.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/construction-1.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Product 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/construction-1.jpg') }}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link text-decoration-none"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/construction-1.jpg') }}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link text-decoration-none"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link text-decoration-none"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -500,11 +500,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/repairs-1.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/repairs-1.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Branding 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/repairs-1.jpg') }}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/repairs-1.jpg') }}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -512,11 +512,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/design-1.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/design-1.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Books 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/design-1.jpg') }}" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/design-1.jpg') }}" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -524,11 +524,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/remodeling-2.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/remodeling-2.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>App 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/remodeling-2.jpg') }}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/remodeling-2.jpg') }}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -536,11 +536,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/construction-2.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/construction-2.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Product 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/construction-2.jpg') }}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/construction-2.jpg') }}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -548,11 +548,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/repairs-2.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/repairs-2.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Branding 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/repairs-2.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/repairs-2.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -560,11 +560,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/design-2.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/design-2.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Books 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/design-2.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/design-2.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -572,11 +572,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/remodeling-3.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/remodeling-3.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>App 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/remodeling-3.jpg') }}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/remodeling-3.jpg') }}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -584,11 +584,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/construction-3.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/construction-3.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Product 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/construction-3.jpg') }}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/construction-3.jpg') }}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -596,11 +596,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/repairs-3.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/repairs-3.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Branding 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/repairs-3.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/repairs-3.jpg') }}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -608,11 +608,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
               <div class="portfolio-content h-100">
-                <img src="{{ asset('storage/img/projects/design-3.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ Vite::asset('resources/homepage/assets/img/projects/design-3.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Books 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="{{ asset('storage/img/projects/design-3.jpg') }}" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ Vite::asset('resources/homepage/assets/img/projects/design-3.jpg') }}" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -668,7 +668,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                   <div class="stars">
@@ -686,7 +686,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                   <div class="stars">
@@ -704,7 +704,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                   <div class="stars">
@@ -722,7 +722,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                   <div class="stars">
@@ -740,7 +740,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                   <div class="stars">

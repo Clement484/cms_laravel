@@ -4,7 +4,7 @@
     
 
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url({{ asset('storage/img/page-title-bg.jpg') }});">
+    <div class="page-title dark-background" style="background-image: url({{ Vite::asset('resources/homepage/assets/img/page-title-bg.jpg') }});">
       <div class="container position-relative">
         <h1>About</h1>
         <nav class="breadcrumbs">
@@ -23,7 +23,7 @@
 
         <div class="row position-relative">
 
-          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{ asset('storage/img/about.jpg') }}" ></div>
+          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{ Vite::asset('resources/homepage/assets/img/about.jpg') }}" ></div>
 
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
             <h2 class="inner-title">Consequatur eius et magnam</h2>
@@ -116,7 +116,7 @@
       <div class="container">
 
         <div class="row justify-content-around gy-4">
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{{ asset('storage/img/alt-services.jpg') }}" alt=""></div>
+          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{{ Vite::asset('resources/homepage/assets/img/alt-services.jpg') }}" alt=""></div>
 
           <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
@@ -211,7 +211,7 @@
           </div>
 
           <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="{{ asset('storage/img/features-3-2.jpg') }}" alt="">
+            <img src="{{ Vite::asset('resources/homepage/assets/img/features-3-2.jpg') }}" alt="">
           </div>
 
         </div>
@@ -310,7 +310,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                   <div class="stars">
@@ -328,7 +328,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                   <div class="stars">
@@ -346,7 +346,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                   <div class="stars">
@@ -364,7 +364,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                   <div class="stars">
@@ -382,7 +382,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                   <div class="stars">
