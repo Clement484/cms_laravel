@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url({{ asset('storage/img/page-title-bg.jpg') }});">
+    <div class="page-title dark-background" style="background-image: url({{ Vite::asset('resources/homepage/assets/img/page-title-bg.jpg') }});">
       <div class="container position-relative">
         <h1>Services</h1>
         <nav class="breadcrumbs">
@@ -197,7 +197,7 @@
           </div>
 
           <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="{{ asset('storage/img/features-3-2.jpg') }}" alt="">
+            <img src="{{ Vite::asset('resources/homepage/assets/img/features-3-2.jpg') }}" alt="">
           </div>
 
         </div>
@@ -242,7 +242,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                   <div class="stars">
@@ -260,7 +260,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                   <div class="stars">
@@ -278,7 +278,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                   <div class="stars">
@@ -296,7 +296,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                   <div class="stars">
@@ -314,7 +314,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="{{ asset('storage/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ Vite::asset('resources/homepage/assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                   <div class="stars">
