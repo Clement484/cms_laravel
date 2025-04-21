@@ -79,25 +79,30 @@
                                 </td>
                                 <td>{{ $comment->created_at->diffForHumans() }}</td>
                                 <td>
-                                    @if ($comment->status == 'spam')
-                                    <form action="{{ route('comments.approve', $comment->id) }}" method="post" class="d-inline">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-link text-success p-0 m-0" title="Approve Comment">
-                                            <i class="fas fa-check-circle"></i>
-                                        </button>
-                                    </form>
-                                    
-                                    @else
-                                    <form action="{{ route('comments.spam', $comment->id) }}" method="post" class="d-inline">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-link text-danger p-0 m-0" title="Reject Comment">
-                                            <i class="fas fa-times-circle"></i>
-                                        </button>
-                                    </form>
-                                    
-                                    @endif
+                                    @auth
+                                        @if (Auth::user()->role == 'admin')
+                                          
+                                            @if ($comment->status == 'spam')
+                                            <form action="{{ route('comments.approve', $comment->id) }}" method="post" class="d-inline">
+                                                @csrf
+                                                @method('PATCH')
+                                                <button type="submit" class="btn btn-link text-success p-0 m-0" title="Approve Comment">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </button>
+                                            </form>
+                                            
+                                            @else
+                                            <form action="{{ route('comments.spam', $comment->id) }}" method="post" class="d-inline">
+                                                @csrf
+                                                @method('PATCH')
+                                                <button type="submit" class="btn btn-link text-danger p-0 m-0" title="Reject Comment">
+                                                    <i class="fas fa-times-circle"></i>
+                                                </button>
+                                            </form>
+                                            
+                                            @endif
+                                        @endif
+                                    @endauth
                                     <a 
                                         href="#" 
                                         class="text-danger delete-btn ml-2" 

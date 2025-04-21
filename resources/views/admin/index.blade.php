@@ -126,7 +126,11 @@
             <a href="{{route('posts.create')}}" class="btn btn-outline-primary">
                 <i class="fas fa-plus"></i> Add Post
             </a>
-            <a href="{{ route('users.index') }}" class="btn btn-primary"><i class="fa-solid fa-users-gear"></i> Manage Users</a>
+            @auth
+                @if(Auth::user()->role == 'admin')
+                    <a href="{{ route('users.index') }}" class="btn btn-primary"><i class="fa-solid fa-users-gear"></i> Manage Users</a>
+                @endif
+            @endauth
         </div>
     </div>
 
