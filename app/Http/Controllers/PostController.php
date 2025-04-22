@@ -68,9 +68,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-            // if ($post->user_id !== Auth::id()) {
-            //     return redirect()->route('posts.index')->with('error', 'You are not authorized to edit this post.');
-            // }
+            if ($post->user_id !== auth()->id()) {
+                return back();
+            }
             $categories = Category::all();
         return view('admin.posts.edit', compact('post', 'categories'));
     }

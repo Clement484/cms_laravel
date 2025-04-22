@@ -46,6 +46,12 @@
             </div>
         </li>
 
+        <li class="nav-item">
+            <a href="{{route('homepage.index')}}" class="nav-link">
+                <span class="mr-2 d-none d-lg-inline text-gray-600">Visit Homepage</span>
+            </a>
+        </li>
+
         <!-- Nav Item - Alerts -->
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -120,7 +126,7 @@
                         @foreach($unread_messages as $unread_message)
                         <a class="dropdown-item d-flex align-items-center" href="{{route('messages.index')}}">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src=" {{ Vite::asset('resources/homepage/assets/default.png') }}"
+                                <img class="rounded-circle" src=" {{ Vite::asset('resources/homepage/assets/img/default.png') }}"
                                     alt="...">
                                 <div class="status-indicator bg-success"></div>
                             </div>
