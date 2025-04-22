@@ -43,3 +43,23 @@ Start the Laravel development server
 
 Visit your app in the browser
 - http://127.0.0.1:8000
+
+  
+
+# ⚠️ Heads Up: Email Setup Required for Registration
+
+When a new user registers, the app tries to send out a confirmation or welcome email. If you're:
+
+- Not connected to the internet, or
+
+- Haven’t set up your email settings in the .env file (like MAIL_MAILER, MAIL_HOST, etc.)
+
+then the registration process will throw an error because it couldn't send the email.
+
+**Good news though** — the account still gets created. So, just head back to the login page and sign in with the credentials you used to register.
+
+To avoid this in the future, you can either:
+
+- Set up your mail config properly in the .env file, **or**
+
+- Use the log mailer during development (add MAIL_MAILER=log in .env) so emails just get logged instead of sent.
