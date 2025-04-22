@@ -55,30 +55,34 @@
                             @enderror
                         </div>
 
-                        {{-- Role --}}
-                        <div class="mb-3">
-                            <label class="form-label">Role</label>
-                            <select name="role" class="form-select @error('role') is-invalid @enderror" required>
-                                <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
-                                <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
-                                <option value="moderator" {{ $user->role === 'moderator' ? 'selected' : '' }}>Moderator</option>
-                            </select>
-                            @error('role')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
+                        @auth
+                            @if(auth()->user()->role == 'admin')
+                                {{-- Role --}}
+                                <div class="mb-3">
+                                    <label class="form-label">Role</label>
+                                    <select name="role" class="form-select @error('role') is-invalid @enderror" required>
+                                        <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
+                                        <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
+                                        <option value="moderator" {{ $user->role === 'moderator' ? 'selected' : '' }}>Moderator</option>
+                                    </select>
+                                    @error('role')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
-                        {{-- Status --}}
-                        <div class="mb-3">
-                            <label class="form-label">Status</label>
-                            <select name="is_active" class="form-select @error('is_active') is-invalid @enderror">
-                                <option value="1" {{ $user->is_active ? 'selected' : '' }}>Active</option>
-                                <option value="0" {{ !$user->is_active ? 'selected' : '' }}>Inactive</option>
-                            </select>
-                            @error('is_active')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
+                                {{-- Status --}}
+                                <div class="mb-3">
+                                    <label class="form-label">Status</label>
+                                    <select name="is_active" class="form-select @error('is_active') is-invalid @enderror">
+                                        <option value="1" {{ $user->is_active ? 'selected' : '' }}>Active</option>
+                                        <option value="0" {{ !$user->is_active ? 'selected' : '' }}>Inactive</option>
+                                    </select>
+                                    @error('is_active')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            @endif
+                        @endauth
 
                         {{-- Date of Birth --}}
                         <div class="mb-3">

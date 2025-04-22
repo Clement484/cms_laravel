@@ -74,7 +74,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="" class="text-decoration-none">
+                                    <a href="mailto:{{ $message->email }}" class="text-decoration-none">
                                         {{ $message->email }}
                                     </a>
                                 </td>

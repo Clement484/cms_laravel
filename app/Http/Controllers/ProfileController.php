@@ -46,6 +46,12 @@ class ProfileController extends Controller
      */
     public function edit(string $id)
     {
+        //This means if the the user's id is not equal to the id in the url, they should be redirected back
+        if (auth()->user()->id != $id) {
+        // abort(403, 'Unauthorized action.');
+        return back();
+        }
+
         $user = User::findOrFail($id);
         return view('admin.profile.edit', compact('user'));
     }
