@@ -1,6 +1,9 @@
 # My Laravel CMS Project
 
-This is my first Laravel CMS project. Pushed to GitHub and ready for deployment!
+
+**cms_laravel** is a powerful, modular, and developer-friendly Content Management System (CMS) built using the Laravel framework. It is designed to help developers and teams quickly build and manage websites or web applications with structured content, flexible user roles, and a clean codebase that follows Laravel best practices.
+
+This CMS offers all the essential tools needed for content creation, media management, and administrative control — without locking you into a bloated or overly opinionated system. Whether you're building a company website, a blog, or a client platform, **cms_laravel** gives you a solid foundation to start from.
 
 # Project Installation Guide
 
@@ -31,6 +34,9 @@ Run database migrations
 
 Seed the database (optional)
 - php artisan db:seed
+
+Create storage symlink
+- php artisan storage:link
 
 Install Node.js dependencies
 - npm install
